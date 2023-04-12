@@ -11,6 +11,24 @@ async function logJSONData() {
     countryInfo = jsonData; 
 
 }
+
+function createMenuOptions(){
+
+    //<option value="Canada">Canada</option>
+    const countrySelectRef = document.querySelector 
+    ("#countrySelection"); 
+    countrySelectRef.innerHTML=""; 
+
+    //start inserting options for this menu 
+    for (let i=0; i<countryInfo.length; i++)
+    {
+        countrySelectRef.innerHTML+= `<option value="${countryInfo[i].Name}">${countryInfo[i].Name}</option>`;
+    }
+}
+
+
+
+
 function getCountryInfo()
 {
 
