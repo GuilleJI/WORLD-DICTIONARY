@@ -8,7 +8,8 @@ let countryInfo;
 async function logJSONData() {
     const response = await fetch("http://127.0.0.1:5500/countries.json");
     const jsonData = await response.json();
-    countryInfo = jsonData; 
+    countryInfo = jsonData;
+    createMenuOptions(); 
 
 }
 
@@ -25,7 +26,6 @@ function createMenuOptions(){
         countrySelectRef.innerHTML+= `<option value="${countryInfo[i].Name}">${countryInfo[i].Name}</option>`;
     }
 }
-
 
 
 
