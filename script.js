@@ -3,11 +3,12 @@ alert("Greetings! And Welcome to World Encyclopedia!!");
 // read data from csv file
 
 logJSONData();
+let countryInfo;
 
 async function logJSONData() {
     const response = await fetch("http://127.0.0.1:5500/countries.json");
     const jsonData = await response.json();
-    console.log(jsonData);
+    countryInfo = jsonData; 
 
 }
 function getCountryInfo()
