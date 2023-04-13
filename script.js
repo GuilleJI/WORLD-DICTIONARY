@@ -67,8 +67,9 @@ function getPopulationPercentage(){
 
     //Calculate the population percentage
     const populationPercentage =((population / worldPopulation) * 100).toFixed(2); 
-    
 
+    //Display the population percentage 
+    formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
 
 }
 //calculate population %
