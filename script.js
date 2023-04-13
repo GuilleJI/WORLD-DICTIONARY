@@ -42,8 +42,27 @@ function getCountryInfo()
     //change the href of the wikipage link/button 
     let wikiLink = document.querySelector("#wikiPageLink");
     wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+selectedCountry);
+
+    
+
 }
 
+function getPopulationPercentage(){
+
+    //Get a reference to the form
+    let formRef = document.querySelector("#countryInfoForm");
+
+    //Get the selected country and its population
+    let selectedCountry = formRef["countrySelection"].value.replace(" "," ");
+    let population =0; 
+    for (let i = 0; i < countryInfo.length; i++)  {
+        if (countryInfo[i].Name === selectedCountry) {
+            population = countryInfo[i].Population;
+            break; 
+        }
+    }
+
+}
 //calculate population %
 
 //calculate population density 
