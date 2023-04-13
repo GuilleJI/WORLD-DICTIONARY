@@ -66,14 +66,14 @@ function getPopulationPercentage(){
     //Get world population
     const worldPopulation = countryInfo.reduce((total, c) => total + c.Population,0);
 
-    //Calculate the population percentage
+    //calculate population %
     const populationPercentage =((population / worldPopulation) * 100).toFixed(2); 
 
     //Display the population percentage 
     formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
 
 }
-//calculate population %
+
 
 //calculate population density 
 
