@@ -64,7 +64,7 @@ function getPopulationPercentage(){
     }
 
     //Get world population
-    const worldPopulation = countryInfo.reduce((total, c) => total + c.Population,0);
+    const worldPopulation = countryInfo.reduce((total, c) => total + c.Population,0); //this line is based off 'Array.prototype.reduce method 
 
     //calculate population %
     const populationPercentage =((population / worldPopulation) * 100).toFixed(2); 
