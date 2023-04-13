@@ -62,6 +62,8 @@ function getPopulationPercentage(){
         }
     }
 
+    const worldPopulation = countryInfo.reduce((total, c)=> total + c.Population,0);
+
 }
 //calculate population %
 
