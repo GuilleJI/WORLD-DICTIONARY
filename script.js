@@ -44,7 +44,8 @@ function getCountryInfo()
     wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+selectedCountry);
 
     
-
+    //call 'getCountryInfo()' function after retrieving the selected country and its population data
+    getPopulationPercentage(); 
 }
 
 function getPopulationPercentage(){
