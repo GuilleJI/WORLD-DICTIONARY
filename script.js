@@ -76,9 +76,9 @@ function getPopulationPercentage(){
 
     //Display the population percentage 
     formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
-    
+
     //Display country population
-    formRef["populationDisplay"].value= `${population}`;
+    formRef["populationDisplay"].value= `Total population: ${population}`;
 }
 
 
