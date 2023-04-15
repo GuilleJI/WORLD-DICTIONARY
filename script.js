@@ -43,9 +43,14 @@ function getCountryInfo()
     let wikiLink = document.querySelector("#wikiPageLink");
     wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+selectedCountry);
 
+    // Get country population
+
     
     //call 'getCountryInfo()' function after retrieving the selected country and its population data
     getPopulationPercentage(); 
+    
+     
+
 }
 
 function getPopulationPercentage(){
@@ -71,7 +76,9 @@ function getPopulationPercentage(){
 
     //Display the population percentage 
     formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
-
+    
+    //Display country population
+    formRef["populationDisplay"].value= `${population}`;
 }
 
 
