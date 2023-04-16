@@ -77,7 +77,9 @@ function getPopulationPercentage(){
     const populationPercentage =((population / worldPopulation) * 100).toFixed(2); 
 
     //calculate population density in sq kilometers and later convert it to sq miles
-    
+
+    const populationDensityKm = (population/area).toFixed(2);  // created variable calculating the population density in sq km. 
+    const populationDensityMi = (populationDensityKm * 0.386).toFixed(2); // created variable calculating the population density converted from sq km to sq miles. 
 
    
 
