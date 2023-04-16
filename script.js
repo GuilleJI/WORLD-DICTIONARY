@@ -81,6 +81,9 @@ function getPopulationPercentage(){
     const populationDensityKm = (population/area).toFixed(2);  // created variable calculating the population density in sq km. 
     const populationDensityMi = (populationDensityKm * 0.386).toFixed(2); // created variable calculating the population density converted from sq km to sq miles. 
 
+    //create variable which makes reference to html input "pUnitSelection"
+    const pUnitSelected = formRef["pUnitSelection"].value; 
+
    
 
     //Display the population percentage 
