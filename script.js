@@ -47,11 +47,10 @@ function getCountryInfo()
 
     
     //call 'getCountryInfo()' function after retrieving the selected country and its population data
-    getPopulationPercentage(); 
-    
-     
+    getPopulationPercentage();   
 
 }
+
 
 function getPopulationPercentage(){
 
@@ -68,46 +67,58 @@ function getPopulationPercentage(){
             area = countryInfo[i].Area; 
             break; 
         }
-    } // created a for loop to determine the specific population and area of the selected country
+    } // created a for loop to determine country population and country area
+
+    //Display country population
+    formRef["populationDisplay"].value= `Total population: ${population}`;
+
 
     //Get world population
     const worldPopulation = countryInfo.reduce((total, c) => total + c.Population,0); //this line is based off 'Array.prototype.reduce method 
-
     //calculate population %
     const populationPercentage =((population / worldPopulation) * 100).toFixed(2); 
 
-    //calculate population density in sq kilometers and later convert it to sq miles
+    //Display the population percentage 
+    formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
 
-    const populationDensityKm = (population/area).toFixed(2);  // created variable calculating the population density in sq km. 
-    const populationDensityMi = (populationDensityKm * 0.386).toFixed(2); // created variable calculating the population density converted from sq km to sq miles. 
+
+
+    //calculate population density in sq kilometers and later convert it to sq miles
+    const populationDensityKm = (population/area).toFixed(2);  // created variable calculating population density in sq km. 
+    const populationDensityMi = (populationDensityKm * 0.386).toFixed(2); // created variable calculating population density converted from sq km to sq miles. 
 
     //create variable which makes reference to html input "pUnitSelection"
     const pUnitSelected = formRef["pUnitSelection"].value; 
-
-    //create an if else statement to specify a new condition if the first condition is false. In this case I want the value displayed in the 'pDensityDisplay' input field to change based on the user's selection of Sq. miles or Sq. Km 
-
     let populationDensity =0; 
     if (pUnitSelected === "Per Sq. Miles"){
         populationDensity = populationDensityMi; 
     }else{
         populationDensity = populationDensityKm; 
-    }
+    }//create an if else statement to specify a new condition if the first condition is false. In this case I want the value displayed in the 'pDensityDisplay' input field to change based on the user's selection either Sq. miles or Sq. Km 
 
     //Display population density (per sq. km or per sq. mi)
     formRef["pDensityDisplay"].value = populationDensity; 
 
-    //Display the population percentage 
-    formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
 
-    //Display country population
-    formRef["populationDisplay"].value= `Total population: ${population}`;
+    //Calculate Area sq. miles from Area sq. Km
+    const areaInKm = area; 
+    const areaInMiles = (areaInKm * 0.386).toFixed(2);
 
-    
+    //create variable making reference to html label "aUnitSelection" 
+    const aUnitSelected = formRef['aUnitSelection'].value
+
+    let countryAreaIn =0; 
+    if (aUnitSelected === "miles"){
+        countryAreaIn = areaInMiles;
+
+    }else{
+        countryAreaIn = areaInKm;
+    }//created an if else statement to specify a new condition if the first condition is false. In this case I want the value displayed in the 'areaDisplay' input field to change based on the user's selection either sq. miles or Sq. Km. 
+
+    //Display Area in sq.km and sq.Miles
+    formRef["areaDisplay"].value = countryAreaIn; 
 }
 
 
 
 
-//convert sq miles km / vice versa 
-
-//convert per sq miles to per sq km / vice versa
