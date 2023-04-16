@@ -60,13 +60,15 @@ function getPopulationPercentage(){
 
     //Get the selected country and its population
     let selectedCountry = formRef["countrySelection"].value.replace(" "," ");
-    let population =0; 
+    let population =0; // created population as a variable to determine the population of the selected country
+    let area=0; // created area as a new variable to determine the area of  the selected country
     for (let i = 0; i < countryInfo.length; i++)  {
         if (countryInfo[i].Name === selectedCountry) {
             population = countryInfo[i].Population;
+            area = countryInfo[i].Area; 
             break; 
         }
-    }
+    } // created a for loop to determine the specific population and area of the selected country
 
     //Get world population
     const worldPopulation = countryInfo.reduce((total, c) => total + c.Population,0); //this line is based off 'Array.prototype.reduce method 
@@ -74,15 +76,22 @@ function getPopulationPercentage(){
     //calculate population %
     const populationPercentage =((population / worldPopulation) * 100).toFixed(2); 
 
+    //calculate population density in sq kilometers and later convert it to sq miles
+    
+
+   
+
     //Display the population percentage 
     formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
 
     //Display country population
     formRef["populationDisplay"].value= `Total population: ${population}`;
+
+    
 }
 
 
-//calculate population density 
+
 
 //convert sq miles km / vice versa 
 
