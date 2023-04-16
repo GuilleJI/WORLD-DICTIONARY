@@ -84,7 +84,17 @@ function getPopulationPercentage(){
     //create variable which makes reference to html input "pUnitSelection"
     const pUnitSelected = formRef["pUnitSelection"].value; 
 
-   
+    //create an if else statement to specify a new condition if the first condition is false. In this case I want the value displayed in the 'pDensityDisplay' input field to change based on the user's selection of Sq. miles or Sq. Km 
+
+    let populationDensity =0; 
+    if (pUnitSelected === "Per Sq. Miles"){
+        populationDensity = populationDensityMi; 
+    }else{
+        populationDensity = populationDensityKm; 
+    }
+
+    //Display population density (per sq. km or per sq. mi)
+    formRef["pDensityDisplay"].value = populationDensity; 
 
     //Display the population percentage 
     formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
