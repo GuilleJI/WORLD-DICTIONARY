@@ -3,7 +3,6 @@
     <head>
         <title>WORLD DICTIONARY</title>
         <script src="script.js" defer></script>
-        <link rel="stylesheet" href="index.css">
         <link rel="stylesheet" href="index_layout.css">
     </head> 
 
@@ -20,19 +19,19 @@
             <option value="Bolivia">Bolivia</option>
         </select><br><br>
 
-            <label class="topleft" for="countryInfo">Country Info: </label>
+            <label class="topleft" for="countryInfo"><strong>Country Info:</strong> </label>
             <br><br>
             <div id="flagImg">
                 <img id="flagImage" src="" alt="Flag Image"> 
             </div>
 
-            <label class="topRight" for="populationDisplay">Population: </label>
+            <label class="topRight" for="populationDisplay"><strong>Population: </strong></label>
             <br><br>
 
             <input type="text" id="populationDisplay" name="populationDisplay">
             <br><br>
 
-            <label for="aUnitSelection"> Area In: </label><br>
+            <label for="aUnitSelection"> <strong>Area In: </strong></label><br>
             <select id="aUnitSelection" name="aUnitSelection">
                 <option value="miles">Sq. Miles</option>
                 <option value="km">Sq. Km</option>
@@ -47,7 +46,7 @@
             <input type="text" id="pDensityDisplay" name="pDensityDisplay">
             
 
-        <h2>Percentage of World Population:</h2>
+        <h2 class="populationPer">Percentage of World Population:</h2>
         <input type="text" id="pPercentDisplay" name="pPercentDisplay"><br><br><br> 
 
         <a href="https://www.google.com" target="_blank" id="wikiPageLink">WikiCountry</a>
