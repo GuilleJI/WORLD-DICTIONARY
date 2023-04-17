@@ -23,8 +23,17 @@ function createMenuOptions(){
     //start inserting options for this menu 
     for (let i=0; i<countryInfo.length; i++)
     {
-        countrySelectRef.innerHTML+= `<option value="${countryInfo[i].Name}">${countryInfo[i].Name}</option>`;
+        countrySelectRef.innerHTML += `<option value="${countryInfo[i].Name}" data-flag="${countryInfo[i].Name.toLowerCase()}.png">${countryInfo[i].Name}</option>`;
     }
+    // add event listener to the select element 
+    const flagImageElement = document.querySelector("#flagImage"); 
+    countrySelectRef.addEventListener("change", function() {
+        const selectedCountry = this.value; 
+        const flagFilename = this.options[this.selectedIndex].getAttribute("data-flag"); 
+        const flagImagePath = `./flags/${flagFilename}`;
+        flagImageElement.setAttribute("src", flagImagePath);
+        flagImageElement.setAttribute("alt", selectedCountry + " Flag Image"); 
+    });
 }
 
 
@@ -43,7 +52,8 @@ function getCountryInfo()
     let wikiLink = document.querySelector("#wikiPageLink");
     wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+selectedCountry);
 
-    // Get country population
+   
+
 
     
     //call 'getCountryInfo()' function after retrieving the selected country and its population data
@@ -70,7 +80,8 @@ function getPopulationPercentage(){
     } // created a for loop to determine country population and country area
 
     //Display country population
-    formRef["populationDisplay"].value= `Total population: ${population}`;
+    formRef["populationDisplay"].value= `${population}`;
+
 
 
     //Get world population
@@ -79,7 +90,8 @@ function getPopulationPercentage(){
     const populationPercentage =((population / worldPopulation) * 100).toFixed(2); 
 
     //Display the population percentage 
-    formRef["pPercentDisplay"].value = `${populationPercentage}% of the world population`;
+    formRef["pPercentDisplay"].value = `${populationPercentage}%`;
+
 
 
 
@@ -100,8 +112,9 @@ function getPopulationPercentage(){
     formRef["pDensityDisplay"].value = populationDensity; 
 
 
+
     //Calculate Area sq. miles from Area sq. Km
-    const areaInKm = area; 
+    const areaInKm = area.toFixed(2); 
     const areaInMiles = (areaInKm * 0.386).toFixed(2);
 
     //create variable making reference to html label "aUnitSelection" 
