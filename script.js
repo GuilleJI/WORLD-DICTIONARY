@@ -68,7 +68,7 @@ function getPopulationPercentage(){
     let formRef = document.querySelector("#countryInfoForm");
 
     //Get the selected country and its population
-    let selectedCountry = formRef["countrySelection"].value.replaceAll(" ","");
+    let selectedCountry = formRef["countrySelection"].value.replace(" "," ");
     let population =0; // created population as a variable to determine the population of the selected country
     let area=0; // created area as a new variable to determine the area of  the selected country
     for (let i = 0; i < countryInfo.length; i++)  {

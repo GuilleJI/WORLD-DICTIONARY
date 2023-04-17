@@ -1,0 +1,15 @@
+@charset "utf-8";
+
+h2.center-top {
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+body{ 
+
+    margin: auto; 
+    width: 720px; 
+    padding: 40px; 
+}
