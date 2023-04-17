@@ -77,8 +77,8 @@ h2.populationPer{
 
 input#pPercentDisplay { 
     margin-top: 10px; 
-    padding: 10px; 
-    font-size: 16px; 
+    padding: 5px; 
+    font-size: 12px; 
     border-radius: 5px; 
     border: 1px solid #ccc; 
 }
