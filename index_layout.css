@@ -9,3 +9,9 @@ h2.center-top {
     text-align: center; 
     margin-top: 50px; 
 }
+
+label.countrylist {
+    font-weight: bold; 
+    display: block; 
+    margin-bottom: 10px;
+}
