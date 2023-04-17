@@ -38,6 +38,12 @@ header {
     color: #fff;
 }
 
+aside {
+    grid-area: sidebar; 
+    background-color: #fff; 
+    padding: 20px; 
+}
+
 .center-top {
     grid-area: header; 
     text-align: center; 
