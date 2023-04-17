@@ -11,3 +11,22 @@ body{
     height: 100vh;
 
 }
+
+.center-top {
+    grid-area: header; 
+    text-align: center; 
+}
+
+form {
+    display: grid; 
+    grid-area: content; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: repeat(5, auto); 
+    grid-gap: 20px; 
+    align-items: start; 
+}
+
+.countrylist {
+    grid-column: 1 / span 2; 
+    text-align: center; 
+}
