@@ -4,62 +4,63 @@
         <title>WORLD DICTIONARY</title>
         <script src="script.js" defer></script>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index_layout.css">
     </head> 
 
-<body> 
+    <body> 
 
-<h2 class="center-top">WORLD DICTIONARY</h2>
+        <h2 class="center-top">WORLD DICTIONARY</h2>
 
-<form id="countryInfoForm">
- <label class="countrylist" for="countrySelection">Choose a country from the list</label><br>
- <select class="list" id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
-    <option value="none">Select a country</option>
-    <option value="Canada">Canada</option>
-    <option value="United States">United States</option>
-    <option value="Bolivia">Bolivia</option>
- </select><br><br>
+        <form id="countryInfoForm">
+        <label class="countrylist" for="countrySelection">Choose a country from the list</label><br>
+        <select class="list" id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
+            <option value="none">Select a country</option>
+            <option value="Canada">Canada</option>
+            <option value="United States">United States</option>
+            <option value="Bolivia">Bolivia</option>
+        </select><br><br>
 
-    <label class="topleft" for="countryInfo">Country Info: </label>
-    <br><br>
-     <div id="flagImg">
-        <img id="flagImage" src="" alt="Flag Image"> 
-     </div>
+            <label class="topleft" for="countryInfo">Country Info: </label>
+            <br><br>
+            <div id="flagImg">
+                <img id="flagImage" src="" alt="Flag Image"> 
+            </div>
 
-    <label class="topRight" for="populationDisplay">Population: </label>
-    <br><br>
+            <label class="topRight" for="populationDisplay">Population: </label>
+            <br><br>
 
-    <input type="text" id="populationDisplay" name="populationDisplay">
-    <br><br>
+            <input type="text" id="populationDisplay" name="populationDisplay">
+            <br><br>
 
-    <label for="aUnitSelection"> Area In: </label><br>
-    <select id="aUnitSelection" name="aUnitSelection">
-        <option value="miles">Sq. Miles</option>
-        <option value="km">Sq. Km</option>
-    </select><br>   
-    <input type="text" id="areaDisplay" name="areaDisplay"><br>
+            <label for="aUnitSelection"> Area In: </label><br>
+            <select id="aUnitSelection" name="aUnitSelection">
+                <option value="miles">Sq. Miles</option>
+                <option value="km">Sq. Km</option>
+            </select><br>   
+            <input type="text" id="areaDisplay" name="areaDisplay"><br>
 
- <h2>Population Density:</h2>
-    <input type="radio" name="pUnitSelection" value="Per Sq. Miles" checked><label for="miles">Per Sq. Mile</label>
-    <input type="radio" name="pUnitSelection" value="Per Sq. Kilometers" checked><label for="km">Per Sq. km</label>
-    <br>
-    <br>
-    <input type="text" id="pDensityDisplay" name="pDensityDisplay">
-    
+        <h2>Population Density:</h2>
+            <input type="radio" name="pUnitSelection" value="Per Sq. Miles" checked><label for="miles">Per Sq. Mile</label>
+            <input type="radio" name="pUnitSelection" value="Per Sq. Kilometers" checked><label for="km">Per Sq. km</label>
+            <br>
+            <br>
+            <input type="text" id="pDensityDisplay" name="pDensityDisplay">
+            
 
- <h2>Percentage of World Population:</h2>
- <input type="text" id="pPercentDisplay" name="pPercentDisplay"><br><br><br> 
+        <h2>Percentage of World Population:</h2>
+        <input type="text" id="pPercentDisplay" name="pPercentDisplay"><br><br><br> 
 
- <a href="https://www.google.com" target="_blank" id="wikiPageLink">WikiCountry</a>
+        <a href="https://www.google.com" target="_blank" id="wikiPageLink">WikiCountry</a>
 
-    <!----
-    <input type="button" id= "wikiBtn" onclick="window.location.href='https://www.google.com';" value="WikiCountry"></button>
-    <button id="quizBtn" onclick="">Launch Quiz</button>
-    --->
-
-
-</form>
+            <!----
+            <input type="button" id= "wikiBtn" onclick="window.location.href='https://www.google.com';" value="WikiCountry"></button>
+            <button id="quizBtn" onclick="">Launch Quiz</button>
+            --->
 
 
-</body>
+        </form>
+
+
+    </body>
 
 </html>

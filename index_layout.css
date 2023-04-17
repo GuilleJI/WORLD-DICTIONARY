@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+body{
+    display: grid; 
+    grid-template-columns: 1fr 3 fr; 
+    grid-template-columns: 1 fr 3 fr; 
+    grid-template-rows: 100px 1fr; 
+    grid-template-areas: 
+        "header header"
+        "sidebar content";
+    height: 100vh;
+
+}

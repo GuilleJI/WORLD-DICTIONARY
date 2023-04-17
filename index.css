@@ -15,6 +15,7 @@ body{
 }
 
 .topleft {
+    
     position: absolute;
     top: 110px;
     font-size: 20px;
@@ -22,12 +23,12 @@ body{
 }
 
 .topRight {
-    position: relative;
-    right: -600px;
-    top: -140px;
-    font-weight: bold;
-    font-size: 20px;
-}
+    position: absolute;
+    top: 100px;
+    right: 150px;
+    width: 200px;
+    height: 100px;
+  }
 
 .countrylist{
 
