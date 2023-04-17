@@ -14,19 +14,22 @@ label.countrylist {
     font-weight: bold; 
     display: block; 
     margin-bottom: 10px;
+    
 }
 
 select.list {
     padding: 10px; 
     font-size: 16px; 
     border-radius: 5px; 
-    border: 1px solid #ccc; 
+    border: 1px solid #ccc;
+    
 }
 
 label.topleft {
     font-weight: bold; 
     display: block; 
     margin-top: 20px; 
+    
 }
 
 label.topRight {
@@ -34,11 +37,11 @@ label.topRight {
     font-weight: bold; 
     display: block; 
     margin-top: 20px; 
-    text-align: center; 
+     
 }
 
 #flagImg { 
-    text-align: center; 
+    
     margin-top: 20px;
 }
 
@@ -53,6 +56,7 @@ input#areaDisplay {
     font-size: 16px; 
     border-radius: 5px; 
     border: 1px solid #ccc; 
+    
 }
 
 h2.popDen { 
