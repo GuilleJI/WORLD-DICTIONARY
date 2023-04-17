@@ -34,5 +34,15 @@ label.topRight {
     font-weight: bold; 
     display: block; 
     margin-top: 20px; 
-    text-align: right; 
+    text-align: center; 
+}
+
+#flagImg { 
+    text-align: center; 
+    margin-top: 20px;
+}
+
+#flagImage {
+    max-width: 200px; 
+    max-height: 150px;
 }
