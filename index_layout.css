@@ -44,6 +44,14 @@ aside {
     padding: 20px; 
 }
 
+main {
+    grid-area: content; 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* I got this line at : https://web.dev/patterns/layout/repeat-auto-minmax/  */
+    grid-gap: 20px; 
+    padding: 20px; 
+}
+
 .center-top {
     grid-area: header; 
     text-align: center; 
