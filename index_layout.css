@@ -28,3 +28,11 @@ label.topleft {
     display: block; 
     margin-top: 20px; 
 }
+
+label.topRight {
+
+    font-weight: bold; 
+    display: block; 
+    margin-top: 20px; 
+    text-align: right; 
+}
