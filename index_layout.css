@@ -58,3 +58,15 @@ input#areaDisplay {
 h2.popDen { 
     margin-top: 25px;
 }
+
+input[name="pUnitSelection"] {
+    margin-right: 10px; 
+}
+
+input#pDensityDisplay {
+    margin-top: 5px; 
+    padding: 3px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: 1px solid  #ccc; 
+}
