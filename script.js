@@ -43,7 +43,7 @@ function getCountryInfo()
 
     //declare a reference to the form 
     let formRef = document.querySelector("#countryInfoForm");
-    let selectedCountry = formRef["countrySelection"].value.replace(" "," ");
+    let selectedCountry = formRef["countrySelection"].value.replaceAll(" ","_");
     alert(selectedCountry);
     let pUnitSelected = formRef["pUnitSelection"].value; 
     alert(pUnitSelected);
@@ -68,7 +68,7 @@ function getPopulationPercentage(){
     let formRef = document.querySelector("#countryInfoForm");
 
     //Get the selected country and its population
-    let selectedCountry = formRef["countrySelection"].value.replace(" "," ");
+    let selectedCountry = formRef["countrySelection"].value.replaceAll(" ","");
     let population =0; // created population as a variable to determine the population of the selected country
     let area=0; // created area as a new variable to determine the area of  the selected country
     for (let i = 0; i < countryInfo.length; i++)  {
@@ -93,11 +93,12 @@ function getPopulationPercentage(){
     formRef["pPercentDisplay"].value = `${populationPercentage}%`;
 
 
-
+    //convert area in sq. miles to sq. km 
+    const areaSqKm = (area * 2.58999).toFixed(2); 
 
     //calculate population density in sq kilometers and later convert it to sq miles
-    const populationDensityKm = (population/area).toFixed(2);  // created variable calculating population density in sq km. 
-    const populationDensityMi = (populationDensityKm * 0.386).toFixed(2); // created variable calculating population density converted from sq km to sq miles. 
+    const populationDensityKm = (population/areaSqKm).toFixed(2);  // created variable calculating population density in sq km. 
+    const populationDensityMi = (population/area).toFixed(2); // created variable calculating population density converted from sq km to sq miles. 
 
     //create variable which makes reference to html input "pUnitSelection"
     const pUnitSelected = formRef["pUnitSelection"].value; 
@@ -114,8 +115,8 @@ function getPopulationPercentage(){
 
 
     //Calculate Area sq. miles from Area sq. Km
-    const areaInKm = area.toFixed(2); 
-    const areaInMiles = (areaInKm * 0.386).toFixed(2);
+    const areaInMiles = area.toFixed(2); 
+    const areaInKm = (area * 2.58999).toFixed(2);
 
     //create variable making reference to html label "aUnitSelection" 
     const aUnitSelected = formRef['aUnitSelection'].value
