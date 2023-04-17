@@ -82,3 +82,16 @@ input#pPercentDisplay {
     border-radius: 5px; 
     border: 1px solid #ccc; 
 }
+
+#wikiPageLink {
+    display: block; 
+    margin-top: 50px; 
+    text-align: center; 
+    color: blue; 
+    text-decoration: none; 
+    font-weight: bold;
+}
+
+#wikiPageLink:hover {
+    text-decoration: underline; 
+}
