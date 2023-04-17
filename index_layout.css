@@ -48,9 +48,13 @@ label.topRight {
 }
 
 input#areaDisplay {
-    margin-top: 10px; 
-    padding: 10px; 
+    margin-top: 5px; 
+    padding: 3px; 
     font-size: 16px; 
     border-radius: 5px; 
     border: 1px solid #ccc; 
+}
+
+h2.popDen { 
+    margin-top: 25px;
 }
