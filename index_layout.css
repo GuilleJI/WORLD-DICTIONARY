@@ -74,3 +74,11 @@ input#pDensityDisplay {
 h2.populationPer{
     margin-top: 15px; 
 }
+
+input#pPercentDisplay { 
+    margin-top: 10px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
