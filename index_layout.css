@@ -30,3 +30,33 @@ form {
     grid-column: 1 / span 2; 
     text-align: center; 
 }
+
+.list {
+    width: 100%;
+}
+
+.topleft {
+    grid-column: 1 / span 1; 
+}
+
+#flagImg { 
+    grid-column: 2 / span 1;
+    text-align: right; 
+}
+
+#populationDisplay {
+
+    width: 100%;
+}
+
+#aUnitSelection {
+    width: 100%; 
+}
+
+#areaDisplay {
+    width: 100%; 
+}
+
+input[type="radio"]{
+    margin-right: 10px;
+}
