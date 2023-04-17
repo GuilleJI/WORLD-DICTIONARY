@@ -27,21 +27,35 @@ form {
 }
 
 .countrylist {
-    grid-column: 1 / span 2; 
-    text-align: center; 
+    grid-column: 1 / span 2;
+    grid-row: 3 / span 1;  
+    text-align: left; 
 }
 
 .list {
     width: 100%;
+    text-align: left;
+    grid-column: 1 / span 1; 
+    
 }
 
 .topleft {
     grid-column: 1 / span 1; 
+    grid-row: 1 / span 1;
+}
+
+.topRight {
+
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    justify-self: center;
+    align-self: center;
+    text-align: right;
 }
 
 #flagImg { 
-    grid-column: 2 / span 1;
-    text-align: right; 
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
 }
 
 #populationDisplay {
