@@ -60,3 +60,13 @@ form {
 input[type="radio"]{
     margin-right: 10px;
 }
+
+#pPercentDisplay {
+    width: 100%; 
+}
+
+#wikiPageLink{
+    grid-column: 1 / span 2;
+    text-align: center; 
+    margin-top: 20px;  
+}
