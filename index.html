@@ -11,8 +11,8 @@
 <h2 class="center-top">WORLD DICTIONARY</h2>
 
 <form id="countryInfoForm">
- <label for="countrySelection">Choose a country from the list</label><br>
- <select id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
+ <label class="countrylist" for="countrySelection">Choose a country from the list</label><br>
+ <select class="list" id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
     <option value="none">Select a country</option>
     <option value="Canada">Canada</option>
     <option value="United States">United States</option>
@@ -25,7 +25,7 @@
         <img id="flagImage" src="" alt="Flag Image"> 
      </div>
 
-    <label for="populationDisplay">Population: </label>
+    <label class="topRight" for="populationDisplay">Population: </label>
     <br><br>
 
     <input type="text" id="populationDisplay" name="populationDisplay">
