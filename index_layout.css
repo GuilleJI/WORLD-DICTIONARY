@@ -7,6 +7,12 @@
     box-sizing: border-box; 
 }
 
+:root{ 
+    --primary-color: #0077ff; 
+    --secondary-color: #f8f8f8; 
+
+}
+
 body{
     display: grid; 
     grid-template-columns: 1fr 3fr; 
