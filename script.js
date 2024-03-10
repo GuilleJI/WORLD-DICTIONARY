@@ -6,7 +6,7 @@ logJSONData();
 let countryInfo;
 
 async function logJSONData() {
-    const response = await fetch("http://127.0.0.1:5500/countries.json");
+    const response = await fetch("countries.json");
     const jsonData = await response.json();
     countryInfo = jsonData;
     createMenuOptions(); 
@@ -30,7 +30,7 @@ function createMenuOptions(){
     countrySelectRef.addEventListener("change", function() {
         const selectedCountry = this.value; 
         const flagFilename = this.options[this.selectedIndex].getAttribute("data-flag"); 
-        const flagImagePath = `./flags/${flagFilename}`;
+        const flagImagePath = `./flags/${flagFilename.replaceAll(" ","_")}`;
         flagImageElement.setAttribute("src", flagImagePath);
         flagImageElement.setAttribute("alt", selectedCountry + " Flag Image"); 
     });
@@ -50,11 +50,7 @@ function getCountryInfo()
 
     //change the href of the wikipage link/button 
     let wikiLink = document.querySelector("#wikiPageLink");
-    wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+selectedCountry);
-
-   
-
-
+    wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+ selectedCountry );
     
     //call 'getCountryInfo()' function after retrieving the selected country and its population data
     getPopulationPercentage();   
