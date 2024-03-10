@@ -1,5 +1,12 @@
 [
   {
+    "Name": "Select Country",
+    "Population": 0,
+    "Area": 0
+
+  },
+
+  {
     "Name": "Afghanistan",
     "Population": 29835392,
     "Area": 250000
