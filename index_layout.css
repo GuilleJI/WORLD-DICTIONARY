@@ -7,7 +7,7 @@ body{
 
 h2.center-top {
     text-align: center; 
-    margin-top: 50px; 
+    padding: 40px
 }
 
 label.countrylist {
@@ -43,7 +43,7 @@ label.topRight {
 #flagImg { 
     
     margin-top: 20px;
-    text-align: center; 
+    
     
 }
 
@@ -55,7 +55,7 @@ label.topRight {
 input#areaDisplay {
     margin-top: 5px; 
     padding: 3px; 
-    font-size: 16px; 
+    font-size: 12px; 
     border-radius: 5px; 
     border: 1px solid #ccc; 
     
@@ -90,14 +90,72 @@ input#pPercentDisplay {
 }
 
 #wikiPageLink {
-    display: block; 
-    margin-top: 50px; 
     text-align: center; 
-    color: blue; 
     text-decoration: none; 
     font-weight: bold;
 }
 
-#wikiPageLink:hover {
-    text-decoration: underline; 
+
+.button{
+    margin: 20px;
+    text-align: center;
+
 }
+
+.Wiki-button {
+    border-radius: 4px;
+    background-color: rgb(53, 114, 114);
+    border: none;
+    color: #fff;
+    text-align: center; 
+    font-size: 22px;
+    padding: 16px;
+    width:220px; 
+    transition: all 0.5s; 
+    cursor: pointer; 
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0,0,0,.7); 
+}
+
+.Wiki-button{
+    cursor: pointer;
+    display: inline-block; 
+    position: relative; 
+    transition: 0.5s;
+}
+
+.Wiki-button:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.Wiki-button:hover {
+    padding-right: 24px;
+    padding-left:8px;
+}
+
+.Wiki-button:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+
+.parent{
+    margin: 1rem;
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.article-1, .article-2{
+    display: inline-block;
+    border: 1px solid red;
+    padding: 1rem 1rem;
+    vertical-align: middle;
+
+}
+
+
