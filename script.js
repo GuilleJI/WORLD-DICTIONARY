@@ -25,15 +25,17 @@ function createMenuOptions(){
     {
         countrySelectRef.innerHTML += `<option value="${countryInfo[i].Name}" data-flag="${countryInfo[i].Name.toLowerCase()}.png">${countryInfo[i].Name}</option>`;
     }
+
     // add event listener to the select element 
     const flagImageElement = document.querySelector("#flagImage"); 
     countrySelectRef.addEventListener("change", function() {
-        const selectedCountry = this.value; 
-        const flagFilename = this.options[this.selectedIndex].getAttribute("data-flag"); 
-        const flagImagePath = `./flags/${flagFilename.replaceAll(" ","_")}`;
+        const selectedCountry = this.value;                               
+        const flagFilename = this.options[this.selectedIndex].getAttribute("data-flag").replaceAll(" ","_"); 
+        const flagImagePath = `./flags/${flagFilename}`;
         flagImageElement.setAttribute("src", flagImagePath);
+        alert(flagImagePath);
         flagImageElement.setAttribute("alt", selectedCountry + " Flag Image"); 
-    });
+    }); 
 }
 
 
@@ -46,11 +48,15 @@ function getCountryInfo()
     let selectedCountry = formRef["countrySelection"].value.replaceAll(" ","_");
     alert(selectedCountry);
     let pUnitSelected = formRef["pUnitSelection"].value; 
-    alert(pUnitSelected);
+    
 
     //change the href of the wikipage link/button 
     let wikiLink = document.querySelector("#wikiPageLink");
-    wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+ selectedCountry );
+    wikiLink.setAttribute("href", "https://en.wikipedia.org/wiki/"+selectedCountry);
+
+   
+
+
     
     //call 'getCountryInfo()' function after retrieving the selected country and its population data
     getPopulationPercentage();   
@@ -92,7 +98,7 @@ function getPopulationPercentage(){
     //convert area in sq. miles to sq. km 
     const areaSqKm = (area * 2.58999).toFixed(2); 
 
-    //calculate population density in sq kilometers and later convert it to sq miles
+    //calculate population density in sq kilometers and vice-versa
     const populationDensityKm = (population/areaSqKm).toFixed(2);  // created variable calculating population density in sq km. 
     const populationDensityMi = (population/area).toFixed(2); // created variable calculating population density converted from sq km to sq miles. 
 
@@ -111,7 +117,7 @@ function getPopulationPercentage(){
 
 
     //Calculate Area sq. miles from Area sq. Km
-    const areaInMiles = area.toFixed(2); 
+    const areaInMiles = area; 
     const areaInKm = (area * 2.58999).toFixed(2);
 
     //create variable making reference to html label "aUnitSelection" 
