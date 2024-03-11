@@ -1,9 +1,16 @@
 @charset "utf-8";
 
+/* Reset default margin and padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-height: 100%;
+}
 
-/* header */
+/* Header */
 .header {
-    grid-area: header; 
+    grid-area: header;
     background-color: rgb(243, 243, 243);
     padding: 30px;
     text-align: center;
@@ -14,56 +21,50 @@
 .grid-container {
     display: grid; 
     grid-template-areas: 
-    'header header header header header header'
-    'left middle middle middle middle right'
-    'footer footer footer footer footer footer';
-    /* grid- column-gap: 10px; - if you want gap between the columns */
+        'header header header header header header'
+        'left middle middle middle middle right'
+        'footer footer footer footer footer footer';
+    grid-template-rows: auto auto auto 1fr;
+    min-height: 100vh; /* Ensure the grid container fills the viewport */
+    margin: 0;
+    padding: 0;
 }
 
-
+/* Columns */
 .left,
 .middle,
 .right {
-    padding: 10px;    
+    padding: 10px;
 }
 
 /* Style the left column */
-.left{
+.left {
     grid-area: left;
+    background-color: antiquewhite;
 }
 
 /* Style the middle column */
 .middle {
     grid-area: middle;
+    background-color: burlywood;
 }
 
 /* Style the right column */
 .right {
     grid-area: right;
+    background-color: antiquewhite;
 }
 
 /* Style the footer */
-.footer{
+.footer {
     grid-area: footer;
     background-color: beige;
     padding: 10px;
     text-align: center;
-
+    min-height: 100px; /* Adjust this value according to your design */
 }
 
-/* Responsibe layout - makes the three columns stack on top of each other instead of next to each other */
-@media (max-width: 600px){
-    .grid-container{
-        grid-template-areas: 
-        'header header header header header header'
-        'left left left left left left'
-        'middle middle middle middle middle'
-        'right right right right right right'
-        'footer footer footer footer footer footer';
-    }
-}
-
-
+/* Card container */
 .card-container {
     display: flex;
     justify-content: space-between;
@@ -76,12 +77,21 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     flex: 1 0 auto;
     margin: 10px;
-    padding: 20px;
+    padding: 30px;
     border: 1px solid #ccc;
     border-radius: 10px;
     transition: 0.3s;
     width: 40%;
-    background-color: cornflowerblue;
+    text-align: center;
+    background-color: rgb(176, 187, 209);
+}
+
+.card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
 
 #flagImage {
@@ -89,6 +99,71 @@
     max-height: 150px;
 }
 
+/* wiki button */
+.Wiki-button {
+    border-radius: 4px;
+    background-color: rgb(209, 67, 57);
+    border: none;
+    color: #fff;
+    text-align: center; 
+    font-size: 22px;
+    padding: 16px;
+    width:220px; 
+    transition: all 0.5s; 
+    cursor: pointer; 
+    margin: 36px;
+    box-shadow: 0 10px 20px -8px rgba(0,0,0,.7); 
+}
 
- 
-  
+.Wiki-button {
+    cursor: pointer;
+    display: inline-block; 
+    position: relative; 
+    transition: 0.5s;
+}
+
+.Wiki-button:after {
+    content: '>>';
+    position: absolute;
+    opacity: 0;
+    top: 14px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.Wiki-button:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+.Wiki-button:hover:after {
+    opacity: 1;
+    right: 10px;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas: 
+            'header'
+            'left'
+            'middle'
+            'right'
+            'footer';
+        grid-template-columns: 1fr;
+    }
+    
+    .card1,
+    .card2 {
+        width: 80%;
+        text-align: center;
+    }
+
+    .Wiki-button {
+        width: 50%;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+}
