@@ -13,7 +13,7 @@
                 <h2 class="center-top">WORLD DICTIONARY</h2>
             </div>
 
-            <div class="left"">Column</div>
+            <div class="left""></div>
             <div class="middle" >
                 <form id="countryInfoForm">
                     <div class="card-container">
@@ -22,7 +22,7 @@
                             <select class="list" id="countrySelection" name="countrySelection" onchange="getCountryInfo()">
                                 <option value="none">Select a country</option>
                             </select><br><br>
-                            <label class="topleft" for="countryInfo"><strong>Country Info:</strong> </label>
+                            <label class="topleft" for="countryInfo"><strong>Flag:</strong> </label>
                             <br>
                             <br>
                             <div id="flagImg">
@@ -32,41 +32,45 @@
                             <label class="topRight" for="populationDisplay"><strong>Population: </strong></label>
                             <br>
 
-                            <input type="text" id="populationDisplay" name="populationDisplay">
+                            <input class="populationDisplay" type="text" id="populationDisplay" name="populationDisplay">
                             <br><br>
 
                             <label for="aUnitSelection"> <strong>Area In: </strong></label>
-                            <select id="aUnitSelection" name="aUnitSelection">
+                            <select class="unit" id="aUnitSelection" name="aUnitSelection">
                                 <option value="miles">Sq. Miles</option>
                                 <option value="km">Sq. Km</option><br>
                             </select><br>
-                            <input type="text" id="areaDisplay" name="areaDisplay"><br>
+                            <input class="area" type="text" id="areaDisplay" name="areaDisplay"><br>
                         </div>
                         <div class="card2">
                             
                             <h2 class="popDen">Population Density:</h2>
 
-                            <input type="radio" name="pUnitSelection" value="Per Sq. Miles" checked><label for="miles">Per Sq. Mile</label>
-                            <input type="radio" name="pUnitSelection" value="Per Sq. Kilometers" checked><label for="km">Per Sq. km</label>
+                            <input class="radio1" type="radio" name="pUnitSelection" value="Per Sq. Miles" checked><label for="miles">Per Sq. Mile</label>
+                            <input class="radio2" type="radio" name="pUnitSelection" value="Per Sq. Kilometers" checked><label for="km">Per Sq. km</label>
                             <br>
                             <br>
-                            <input type="text" id="pDensityDisplay" name="pDensityDisplay">
+                            <input class="pDensityDisplay" type="text" id="pDensityDisplay" name="pDensityDisplay">
                             
 
                             <h2 class="populationPer">Percentage of World Population:</h2>
-                            <input type="text" id="pPercentDisplay" name="pPercentDisplay"><br><br><br>
+                            <input class="Population"type="text" id="pPercentDisplay" name="pPercentDisplay"><br><br><br>
                             <div class="button">
-                                <a class="Wiki-button" type="button" href="https://www.google.com" target="_blank" id="wikiPageLink">Click Here!</a>
+                                <a class="Wiki-button" type="button" href="https://www.google.com" target="_blank" id="wikiPageLink"><strong>Click Here!</strong></a>
                             </div>
                             
                         </div>
                     </div>
                 </form>           
             </div>
-            <div class="right">Column</div>
+            <div class="right"></div>
 
             <div class="footer">
-                <p>Footer</p>
+                <br>
+                <br>
+                <p><strong>© 2023-2024 WORLD DICTIONARY® by Guillermo Jimenez Iriarte.</strong></p>
+                <br>
+                <br>
             </div>
 
         </div>     
