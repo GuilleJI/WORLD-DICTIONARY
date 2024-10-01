@@ -70,7 +70,7 @@ html, body {
 .middle {
     grid-area: middle;
     background-color: rgb(88, 148, 208);
-    background: url("../background-image/books.jpg") no-repeat center; 
+    background: url("background-image/books.jpg") no-repeat center; 
     Height:100%;
 }
 
