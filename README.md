@@ -1,4 +1,5 @@
 World Dictionary
+
 Overview
 World Dictionary is an interactive and user-friendly web application that allows users to explore country-specific data. Built with JavaScript, HTML, and CSS, this platform provides essential information such as population density, area, estimated population, and the percentage of the world's population for each country. Users can easily toggle between miles and kilometers and access each country's Wikipedia page with a single click.
 
