@@ -13,3 +13,7 @@ Technologies Used
  - JavaScript: For interactive functionality and data manipulation.
  - HTML: For structuring the web application.
  - CSS: For styling and enhancing the user interface.
+
+
+![Main Page Display](![image](https://github.com/user-attachments/assets/bd455e8b-878d-499f-9806-1d21ab28bca2)
+
